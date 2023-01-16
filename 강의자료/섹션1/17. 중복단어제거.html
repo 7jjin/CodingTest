@@ -6,10 +6,11 @@
   <body>
     <script>
       function solution(s) {
-        return s.toUpperCase();
+        return s.filter((item, index) => {
+          if (s.indexOf(item) === index) return item;
+        });
       }
-
-      let str = "ItisTimeToStudy";
+      let str = ["good", "time", "good", "time", "student"];
       console.log(solution(str));
     </script>
   </body>

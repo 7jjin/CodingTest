@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let array = [];
+        for (let x of s) {
+          array.push(x.length);
+        }
+        return s.find((el) => el.length === Math.max(...array));
+      }
+      let str = ["teacher", "time", "student", "beautiful", "good"];
+      console.log(solution(str));
+    </script>
+  </body>
+</html>

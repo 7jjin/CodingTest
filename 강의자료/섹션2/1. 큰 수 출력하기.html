@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        const array = arr.filter((item, index) => {
+          if (item > arr[index - 1]) {
+            return item;
+          }
+        });
+        array.unshift(arr[0]);
+        return array;
+      }
+
+      let arr = [7, 3, 9, 5, 6, 12];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>

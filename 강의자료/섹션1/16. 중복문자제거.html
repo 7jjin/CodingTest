@@ -6,11 +6,12 @@
   <body>
     <script>
       function solution(s) {
-        return s.toUpperCase();
-      }
+        let array = s.split("");
+        const set = new Set([...array]);
 
-      let str = "ItisTimeToStudy";
-      console.log(solution(str));
+        console.log(Array.from(set).join(""));
+      }
+      console.log(solution("ksekkset"));
     </script>
   </body>
 </html>

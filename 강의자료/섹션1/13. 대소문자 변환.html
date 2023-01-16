@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let array = s.split("");
+        return array
+          .map((item, index) => {
+            if (item.charCodeAt() >= 65 && item.charCodeAt() <= 90) {
+              return item.toLowerCase();
+            } else {
+              return item.toUpperCase();
+            }
+          })
+          .join("");
+      }
+
+      console.log(solution("StuDY"));
+    </script>
+  </body>
+</html>
