@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let array = [a, b, c];
+        array.sort((a, b) => a - b);
+        return array[2] < array[0] + array[1] ? "Yes" : "No";
+      }
+
+      console.log(solution(7, 6, 11));
+    </script>
+  </body>
+</html>
