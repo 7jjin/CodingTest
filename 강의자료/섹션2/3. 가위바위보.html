@@ -5,7 +5,21 @@
   </head>
   <body>
     <script>
-      function solution(a, b) {}
+      function solution(a, b) {
+        let array = [];
+        for (let i = 0; i < a.length; i++) {
+          if (a[i] === 1 && b[i] === 1) array.push("D");
+          else if (a[i] === 1 && b[i] === 2) array.push("B");
+          else if (a[i] === 1 && b[i] === 3) array.push("A");
+          else if (a[i] === 2 && b[i] === 1) array.push("A");
+          else if (a[i] === 2 && b[i] === 2) array.push("D");
+          else if (a[i] === 2 && b[i] === 3) array.push("B");
+          else if (a[i] === 3 && b[i] === 1) array.push("B");
+          else if (a[i] === 3 && b[i] === 2) array.push("A");
+          else if (a[i] === 3 && b[i] === 3) array.push("D");
+        }
+        return array;
+      }
 
       let a = [2, 3, 3, 1, 3];
       let b = [1, 1, 2, 2, 3];
