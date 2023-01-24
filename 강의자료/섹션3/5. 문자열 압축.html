@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let array = [];
+        for (let i = 0; i < s.length; i++) {
+          let count = 0;
+          if (s[i] === s[i + 1]) {
+            count++;
+          }
+          array.push(count);
+        }
+
+        console.log(array);
+      }
+
+      let str = "KKHSSSSSSSE";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
