@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        let answer;
+        let max = 0;
+        for (let i = 0; i < arr.length; i++) {
+          let hap = String(arr[i])
+            .split("")
+            .reduce((a, b) => Number(a) + Number(b));
+          if (hap > max) {
+            max = hap;
+            answer = arr[i];
+          } else if (hap === max) {
+            if (arr[i] > answer) answer = arr[i];
+          }
+        }
+        return answer;
+      }
+
+      let arr = [128, 460, 603, 40, 521, 137, 123];
+      console.log(solution(7, arr));
+    </script>
+  </body>
+</html>
+
+<!-- <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {}
+
+      let arr = [128, 460, 603, 40, 521, 137, 123];
+      console.log(solution(7, arr));
+    </script>
+  </body>
+</html> -->
