@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(m, product) {
+        let number = arr.length;
+        let answer = 0;
+        let array = [];
+        for (let i = 0; i < number; i++) {
+          let hap = 0;
+          for (let j = 0; j < 2; j++) {
+            hap += arr[i][j];
+          }
+          array.push(hap);
+        }
+        array.sort((a, b) => a - b);
+        console.log(array);
+        let x = 0;
+        while (answer < m) {
+          answer += array[x];
+          x++;
+          console.log(answer);
+        }
+      }
+
+      let arr = [
+        [6, 6],
+        [2, 2],
+        [4, 3],
+        [4, 5],
+        [10, 3],
+      ];
+      console.log(solution(28, arr));
+    </script>
+  </body>
+</html>
