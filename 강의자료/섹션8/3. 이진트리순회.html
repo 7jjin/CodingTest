@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n) {
+        function def(v) {
+          if (v > 7) return;
+          else {
+            def(v * 2);
+            console.log(v);
+            def(v * 2 + 1);
+          }
+        }
+        def(n);
+      }
+
+      console.log(solution(1));
+    </script>
+  </body>
+</html>
